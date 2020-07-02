@@ -1,2 +1,6 @@
+
+botocore
+git+https://github.com/gunthercox/chatterbot-corpus.git#egg=chatterbot-corpus
+chatterbot
 requests
 flask
