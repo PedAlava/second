@@ -15,7 +15,7 @@ def main():
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
-    repo = str(asistente.respon(message))
+    repo = str(asistente.respons(message))
     json_data = {
         "chat_id": chat_id,
         "text": repo,
