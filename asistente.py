@@ -54,7 +54,7 @@ trainer.train([ #Comentar este fragmento después de la primera ejecución exito
 
 
 trainer.train("chatterbot.corpus.spanish") #Comentar este fragmento después de la primera ejecución exitosa del programa
-TOKEN = "1009735735:AAE1aqiXB0KZKA2Bkz8iroC8pvvSP0Az1p0"
+TOKEN = "1376868915:AAGz5em6FJPd4XHNV5RbdmIYElG1e6ftgJs"
 URL = "https://api.telegram.org/bot" + TOKEN + "/"
 
 
