@@ -94,7 +94,7 @@ def respons(id_chat,message):
         n = int(id_cloud)
         n += 1
         aprendizajes.guardar(n,texto_respuesta,"bot","respuesta")
-        enviar_mensaje(id,texto_respuesta)
+        
         c = 0
   elif message_cloud == "aprendido":
     texto_respuesta ="Cambiemos de tema por favor"
