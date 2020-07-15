@@ -69,8 +69,6 @@ trainer.train([ #Comentar este fragmento después de la primera ejecución exito
 def aprenderTodo(lista):
   trainer.train([lista[0],lista[1]])
 
-def enviar_mensaje(idchat, texto):
-  requests.get(URL + "sendMessage?text=" + texto + "&chat_id=" + str(idchat))
 
 
 def respons(message):
