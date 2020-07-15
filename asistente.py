@@ -54,13 +54,14 @@ trainer.train([ #Comentar este fragmento después de la primera ejecución exito
 
 
 trainer.train("chatterbot.corpus.spanish") #Comentar este fragmento después de la primera ejecución exitosa del programa
-TOKEN = "1257318607:AAFmVkSRfZmaOJsaCuW6f802FtoG_vaHg1g"
-URL = "https://api.telegram.org/bot" + TOKEN + "/"
-
 
 trainer.train([ #Comentar este fragmento después de la primera ejecución exitosa del programa
 'Quien es tu creador',
 'Mi creador es Pedro Alexander Alava Gil'
+])
+trainer.train([ #Comentar este fragmento después de la primera ejecución exitosa del programa
+'/start',
+'Hola que tal como estas'
 ])
 
 
@@ -87,15 +88,17 @@ def respons(message):
       c = 0
       n = int(id_cloud)
       n += 1
+      aprendizajes.guardar(n,message,"humano","pregunta")
+      n += 1
       aprendizajes.guardar(n,texto_respuesta,"bot","respuesta")
     else:
-      texto_respuesta ="nose la respuesta enseñame por favor"
-      if response == "nose la respuesta enseñame por favor":
-        n = int(id_cloud)
-        n += 1
-        aprendizajes.guardar(n,texto_respuesta,"bot","respuesta")
-        
-        c = 0
+      texto_respuesta = "nose la respuesta enseñame por favor"
+      n = int(id_cloud)
+      n += 1
+      aprendizajes.guardar(n,message,"humano","pregunta")
+      n+=1
+      aprendizajes.guardar(n,texto_respuesta,"bot","respuesta")
+      c = 0
   elif message_cloud == "aprendido":
     texto_respuesta ="Cambiemos de tema por favor"
   else:
@@ -103,10 +106,15 @@ def respons(message):
     aprendi.append(message_cloud)
     aprendi.append(message)
     aprenderTodo(aprendi)
+    #trainer.train([message_cloud,message])
+    print(aprendi)
     n = int(id_cloud)
     n += 1
-    aprendizajes.guardar(n,"Gracias por enseñarme","bot","respuesta")
-    texto_respuesta = "Gracias por enseñarme"
+    aprendizajes.guardar(n,message,"humano","respuesta")
+    n += 1
+    aprendizajes.guardar(n,"Gracias por enseñarme cambiemos de tema por favor","bot","respuesta")
+    
+    texto_respuesta = "Gracias por enseñarme cambiemos de tema por favor"
   
   return texto_respuesta
 
