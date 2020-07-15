@@ -72,7 +72,7 @@ def enviar_mensaje(idchat, texto):
   requests.get(URL + "sendMessage?text=" + texto + "&chat_id=" + str(idchat))
 
 
-def respons(id_chat,message):
+def respons(message):
   aprendi=[]
   lista = aprendizajes.obtener()
   message_cloud = lista[0]
