@@ -18,11 +18,34 @@ def main():
     response = extracmodelo.modelo(parametro)
     if response is not None:
         json_data = {
-            "fulfillmentText": response,"buttons":[ { 
-                "text": "Sitio Web",
-                "postback": "https://tecno-store2.herokuapp.com/"
-                    }
-                ]
+            "fulfillmentText": response,
+            "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Usted desea Informacion un/unos laptops dell visita nuestra pagina."
+          ]
+        },
+        "platform": "TELEGRAM"
+      },
+      {
+        "card": {
+          "title": "Tecnologic Store Ups",
+          "subtitle": "Tenemos las mejores ofertas en Laptops y Celulares",
+          "imageUri": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Universidad_Polit%C3%A9cnica_Salesiana_%281%29.jpg",
+          "buttons": [
+            {
+              "text": "Visita el Sitio Web",
+              "postback": "https://tecno-store2.herokuapp.com/"
+            },
+            {
+              "text": "Consulta con nuestro Agente",
+              "postback": "https://tecno-store2.herokuapp.com/dialog"
+            }
+          ]
+        },
+        "platform": "TELEGRAM"
+      }
         }
     else:
         json_data = {
