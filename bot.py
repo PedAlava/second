@@ -12,12 +12,17 @@ app = Flask(__name__)
 @app.route('/me', methods=['POST'])
 def main():  
     data = request.json
+    print(data)
     parametro = data['queryResult']['parameters']['modelos']
     print(parametro)
     response = extracmodelo.modelo(parametro)
     if response is not None:
         json_data = {
-            "fulfillmentText": response
+            "fulfillmentText": response,"buttons":[ { 
+                "text": "Sitio Web",
+                "postback": "https://tecno-store2.herokuapp.com/"
+                    }
+                ]
         }
     else:
         json_data = {
