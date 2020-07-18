@@ -46,7 +46,7 @@ def main():
         },
         "platform": "TELEGRAM"
       }
-        }
+            ]}
     else:
         json_data = {
             "fulfillmentText": response,"buttons":[ { 
