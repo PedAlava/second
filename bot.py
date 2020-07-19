@@ -21,7 +21,7 @@ def main():
     if sitio == "store":
         mensaj = "Visualiza algun producto de tu interes"
     else:
-        mensaj = "Visualiza tu "+ nombre +" y añadelo al carrito si deseas.
+        mensaj = "Visualiza tu "+ nombre +" y añadelo al carrito si deseas."
     sitio = "https://tecno-store2.herokuapp.com/" +sitio
     if response is not None:
         json_data = {
