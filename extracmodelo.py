@@ -23,3 +23,19 @@ def modelo(mode):
     except:
         variable = "Por el momento no tenemos el modelo " + mode
     return str(variable)
+
+def mensaTelegram(mode):
+    varia =  "chat/" + mode
+    try:
+        ref = db.reference(varia)
+        lista = ref.get()
+        nombr = lista['nombre']
+        precio = lista['precio']
+        url = lista['url']
+        sitio = "laps"
+    except:
+        nombr = "Por el momento no tenemos el modelo " + mode
+        precio = "$0.0"
+        url = "https://st2.cannypic.com/thumbs/14/141051_632_canny_pic.jpg"
+        sitio = "store"
+    return nombr,precio,url,sitio
