@@ -16,6 +16,13 @@ def main():
     parametro = data['queryResult']['parameters']['modelos']
     print(parametro)
     response = extracmodelo.modelo(parametro)
+    nombre ,precio ,url,sitio = extracmodelo.mensaTelegram(parametro)
+    subtitulo = "Modelo: " + nombre +" Precio: "+ precio
+    if sitio == "store":
+        mensaj = "Visualiza algun producto de tu interes"
+    else:
+        mensaj = "Visualiza tu "+ nombre +" y añadelo al carrito si deseas.
+    sitio = "https://tecno-store2.herokuapp.com/" +sitio
     if response is not None:
         json_data = {
             "fulfillmentText": response,
@@ -23,20 +30,20 @@ def main():
       {
         "text": {
           "text": [
-            "Usted desea Informacion un/unos laptops dell visita nuestra pagina."
+            "informacion detallada: "
           ]
         },
         "platform": "TELEGRAM"
       },
       {
         "card": {
-          "title": "Tecnologic Store Ups",
-          "subtitle": "Tenemos las mejores ofertas en Laptops y Celulares",
-          "imageUri": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Universidad_Polit%C3%A9cnica_Salesiana_%281%29.jpg",
+          "title": nombre,
+          "subtitle": subtitulo,
+          "imageUri": url,
           "buttons": [
             {
-              "text": "Visita el Sitio Web",
-              "postback": "https://tecno-store2.herokuapp.com/"
+              "text": mensaj,
+              "postback": sitio
             },
             {
               "text": "Consulta con nuestro Agente",
