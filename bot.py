@@ -32,8 +32,6 @@ def main():
           "imageUri": "https://image.shutterstock.com/image-vector/sad-apologizing-emoticon-emoji-holding-260nw-1398672683.jpg",
           "accessibilityText": "sdfd"
         },
-         "platform": "PLATFORM_UNSPECIFIED"
-      },
       {
         "text": {
           "text": [
