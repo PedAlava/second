@@ -23,14 +23,15 @@ def main():
     else:
         mensaj = "Visualiza tu "+ nombre +" y añadelo al carrito si deseas."
     sitio = "https://tecno-store2.herokuapp.com/" +sitio
+    #"fulfillmentText": response,
     if response is not None:
         json_data = {
-            "fulfillmentText": response,
+            
             "fulfillmentMessages": [
       {
         "text": {
           "text": [
-            "informacion detallada: "
+            response
           ]
         }
       }
