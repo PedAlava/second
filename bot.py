@@ -28,9 +28,10 @@ def main():
         json_data = {
             "fulfillmentMessages": [
       {
-        "image": {
-          "imageUri": "https://image.shutterstock.com/image-vector/sad-apologizing-emoticon-emoji-holding-260nw-1398672683.jpg",
-            "accessibilityText": "sdsdfsd"
+        "text": {
+          "text": [
+            response
+          ]
         },
         "platform": "PLATFORM_UNSPECIFIED"
       },
