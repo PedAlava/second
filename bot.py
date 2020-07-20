@@ -32,6 +32,15 @@ def main():
           "text": [
             "informacion detallada: "
           ]
+        }
+      }
+            ],
+            "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "informacion detallada: "
+          ]
         },
         "platform": "TELEGRAM"
       },
