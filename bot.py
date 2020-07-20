@@ -26,22 +26,34 @@ def main():
     #"fulfillmentText": response,
     if response is not None:
         json_data = {
-            
-            "fulfillmentMessages": [{
-                {
-          "imageUri": "https://image.shutterstock.com/image-vector/sad-apologizing-emoticon-emoji-holding-260nw-1398672683.jpg",
-          "accessibilityText": "sdfd"
-        },"platform": "PLATFORM_UNSPECIFIED"
-       },
+            "fulfillmentMessages": [
       {
-        "text": {
-          "text": [
-            response
+        "image": {
+          "imageUri": "https://image.shutterstock.com/image-vector/sad-apologizing-emoticon-emoji-holding-260nw-1398672683.jpg",
+            "accessibilityText": "sdsdfsd"
+        },
+        "platform": "PLATFORM_UNSPECIFIED"
+      },
+      {
+        "card": {
+          "title": nombre,
+          "subtitle": subtitulo,
+          "imageUri": url,
+          "buttons": [
+            {
+              "text": mensaj,
+              "postback": sitio
+            },
+            {
+              "text": "Consulta con nuestro Agente",
+              "postback": "https://tecno-store2.herokuapp.com/dialog"
+            }
           ]
         },
         "platform": "PLATFORM_UNSPECIFIED"
-      }, {
-        ],
+      }
+            ]
+            ,
             "fulfillmentMessages": [
       {
         "text": {
