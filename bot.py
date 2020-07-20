@@ -27,7 +27,7 @@ def main():
     if response is not None:
         json_data = {
             "fulfillmentText": response,
-            ,
+            
             "fulfillmentMessages": [
       {
         "text": {
