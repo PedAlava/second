@@ -71,6 +71,7 @@ def main():
                     }
                 ]
         }
+    print(json_data)
     return json_data
 
 
