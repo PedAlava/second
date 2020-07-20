@@ -33,7 +33,8 @@ def main():
           "text": [
             response
           ]
-        }
+        },
+        "platform": "PLATFORM_UNSPECIFIED"
       }, {
         "card": {
           "title": nombre,
@@ -49,7 +50,8 @@ def main():
               "postback": "https://tecno-store2.herokuapp.com/dialog"
             }
           ]
-        }
+        },
+        "platform": "PLATFORM_UNSPECIFIED"
       }  ],
             "fulfillmentMessages": [
       {
