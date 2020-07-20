@@ -60,7 +60,7 @@ def main():
             "informacion detallada: "
           ]
         },
-        "platform": "TELEGRAM"
+        "platform": "PLATFORM_UNSPECIFIED"
       },
       {
         "card": {
@@ -78,7 +78,7 @@ def main():
             }
           ]
         },
-        "platform": "TELEGRAM"
+        "platform": "PLATFORM_UNSPECIFIED"
       }
             ]}
     else:
