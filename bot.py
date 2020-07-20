@@ -26,34 +26,7 @@ def main():
     #"fulfillmentText": response,
     if response is not None:
         json_data = {
-            "fulfillmentMessages": [
-      {
-        "text": {
-          "text": [
-            response
-          ]
-        },
-        "platform": "PLATFORM_UNSPECIFIED"
-      },
-      {
-        "card": {
-          "title": nombre,
-          "subtitle": subtitulo,
-          "imageUri": url,
-          "buttons": [
-            {
-              "text": mensaj,
-              "postback": sitio
-            },
-            {
-              "text": "Consulta con nuestro Agente",
-              "postback": "https://tecno-store2.herokuapp.com/dialog"
-            }
-          ]
-        },
-        "platform": "PLATFORM_UNSPECIFIED"
-      }
-            ]
+            "fulfillmentText": response,
             ,
             "fulfillmentMessages": [
       {
